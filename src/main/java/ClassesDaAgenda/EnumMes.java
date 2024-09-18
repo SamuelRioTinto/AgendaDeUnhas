@@ -11,5 +11,6 @@ public enum EnumMes {
     AGOSTO,
     SETEMPRO,
     OUTUBRO,
+    NOVEMBRO,
     DEZEMBRO
 }

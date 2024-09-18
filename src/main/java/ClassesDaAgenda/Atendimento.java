@@ -5,11 +5,15 @@ public class Atendimento {
     private EnumMes mes;
     private EnumDia dia;
     private String horario;
+    private EnumTipoAtendimento atendimento;
+    private double preco;
 
-    public Atendimento(EnumMes mes,EnumDia dia,String horario){
+    public Atendimento(EnumMes mes,EnumDia dia,String horario,EnumTipoAtendimento atendimento,double preco){
         this.mes=mes;
         this.dia=dia;
         this.horario=horario;
+        this.atendimento=atendimento;
+        this.preco=preco;
     }
 
     public EnumMes getMes() {
@@ -36,8 +40,30 @@ public class Atendimento {
         this.horario = horario;
     }
 
+    public EnumTipoAtendimento getAtendimento() {
+        return atendimento;
+    }
 
+    public void setAtendimento(EnumTipoAtendimento atendimento) {
+        this.atendimento = atendimento;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    @Override
     public String toString() {
-        return "Atendimento foi marcado para {" + "mes=" + mes + ", dia=" + dia + ", horario='" + horario + '\'' + '}';
+        return "Atendimento{" +
+                "mes=" + mes +
+                ", dia=" + dia +
+                ", horario='" + horario + '\'' +
+                ", atendimento=" + atendimento +
+                ", preco=" + preco +
+                '}';
     }
 }

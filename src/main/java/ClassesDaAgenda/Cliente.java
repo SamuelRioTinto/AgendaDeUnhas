@@ -5,11 +5,13 @@ public class Cliente {
     private String nome;
     private String telefone;
     private String cpg;
+    private Atendimento atendimento;
 
-    public Cliente(String nome,String telefone,String cpg){
+    public Cliente(String nome,String telefone,String cpg,Atendimento atendimento){
         this.nome=nome;
         this.telefone=telefone;
         this.cpg=cpg;
+        this.atendimento=atendimento;
     }
 
     public String getNome() {
@@ -36,8 +38,21 @@ public class Cliente {
         this.cpg = cpg;
     }
 
+    public Atendimento getAtendimento() {
+        return atendimento;
+    }
 
+    public void setAtendimento(Atendimento atendimento) {
+        this.atendimento = atendimento;
+    }
+
+    @Override
     public String toString() {
-        return "Cliente{" + "nome='" + nome + '\'' + ", telefone='" + telefone + '\'' + ", cpg='" + cpg + '\'' + '}';
+        return "Cliente{" +
+                "nome='" + nome + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", cpg='" + cpg + '\'' +
+                ", atendimento=" + atendimento +
+                '}';
     }
 }

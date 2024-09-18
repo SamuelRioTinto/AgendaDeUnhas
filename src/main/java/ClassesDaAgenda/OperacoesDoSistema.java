@@ -6,11 +6,9 @@ public interface OperacoesDoSistema {
 
     public  Cliente pesquisaContato(String cpf)throws ContatoNaoExisteException;
 
-    public  boolean existeContato(String cpf);
-
     public  boolean removeContato(String cpf)throws ContatoNaoExisteException;
 
-    public  void EscoliaDeAtendimento(Cliente cliente,int opcaoDeAtendimento);
+    public boolean EscolhaDeAtendimento(String cpf, EnumMes mes, EnumDia dia, String horario, EnumTipoAtendimento atendimento, double preco);
 
 
 }
